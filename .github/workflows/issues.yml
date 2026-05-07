@@ -2,9 +2,9 @@ name: Project Issue Management
 on: issues
 jobs:
   output-issue-info:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Handle Issue Events
         run: |
-          echo "Issue: ${{toJson(github)}}"
+          echo "Issue: ${{toJson(github.event)}}"
           echo "This workflow is triggered manually to manage issues in the project."
