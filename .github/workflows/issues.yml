@@ -1,7 +1,7 @@
 name: Project Issue Management
-on: workflow_dispatch
+on: issues
 jobs:
-  manage-issues:
+  output-issue-info:
     runs-on: unbuntu-latest
     steps:
       - name: Handle Issue Events
