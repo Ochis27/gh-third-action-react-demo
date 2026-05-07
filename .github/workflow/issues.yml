@@ -1,0 +1,14 @@
+name: Project Issue Management
+on: 
+  issues:
+    types: [opened, edited, closed, workflow_dispatched]
+jobs:
+  manage-issues:
+    runs-on: unbuntu-latest
+    steps:
+      - name: Handle Issue Events
+        run: |
+          echo "Issue: ${{toJson(github)}}"
+          echo "Issue event for the project: ${{github.event.action}}"
+          echo "Issue title: ${{github.event.issue.title}}"
+          echo "Issue body: ${{github.event.issue.body}}"
