@@ -1,7 +1,8 @@
 name: Project Issue Management
 on: 
   issues:
-    types: [opened, edited, closed, workflow_dispatched]
+    types: [opened, edited, closed]
+  workflow_dispatch:
 jobs:
   manage-issues:
     runs-on: unbuntu-latest
